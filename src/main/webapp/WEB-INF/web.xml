@@ -1,3 +1,6 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
 <!--
    Licensed to the Apache Software Foundation (ASF) under one
    or more contributor license agreements.  See the NOTICE file
@@ -14,16 +17,8 @@
    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
    KIND, either express or implied.  See the License for the
    specific language governing permissions and limitations
-   under the License.  
+   under the License.    
 -->
-
-Welcome to Yang.DB Site Source Code
-====================================
-
-#### Build
-
-`mvn clean install`
-
-#### Test Site locally - starts a web server on Port 8080
-`mvn clean package jbake:inline -Djbake.port=8080 -Djbake.listenAddress=0.0.0.0`
-
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>

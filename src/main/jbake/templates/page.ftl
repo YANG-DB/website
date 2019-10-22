@@ -1,4 +1,4 @@
-<!--
+<#--
    Licensed to the Apache Software Foundation (ASF) under one
    or more contributor license agreements.  See the NOTICE file
    distributed with this work for additional information
@@ -14,16 +14,17 @@
    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
    KIND, either express or implied.  See the License for the
    specific language governing permissions and limitations
-   under the License.  
+   under the License. 
 -->
+<#include "header.ftl">
 
-Welcome to Yang.DB Site Source Code
-====================================
+<#include "menu.ftl">
 
-#### Build
+<div class="container">
+    <h1 class="title">${content.title}</h1>
 
-`mvn clean install`
+    ${content.body}
 
-#### Test Site locally - starts a web server on Port 8080
-`mvn clean package jbake:inline -Djbake.port=8080 -Djbake.listenAddress=0.0.0.0`
+</div>
 
+<#include "footer.ftl">

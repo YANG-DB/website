@@ -1,0 +1,80 @@
+////
+ * Copyright (C) 2016 - 2019 yangdb   ------ www.yangdb.org ------
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+////
+= Docker
+:jbake-type: page
+:jbake-tags: docker
+:jbake-status: published
+:idprefix:
+
+## Using YangDb from Docker
+
+YangDb {yangdb_version} is now available as a docker image.
+
+Use docker hub image *docker pull yangdb/yang.db* to fetch latest.
+
+'''
+Or use one of the existing release tags:
+https://hub.docker.com/r/yangdb/yang.db/tags
+
+
+### YangDb Runtime Dependency
+The YangDb engine is runtime depended in elasticsearch, it can run with an embedded elasticsearch which is bundled inside,
+Or it can use an existing elasticsearch engine.
+
+#### YangDb Image parameters
+The next parameters define the elasticsearch location to yangDb and are given to docker as environment variables:
+
+* *ELASTICSEARCH_EMBEDDED* - default to true ( use false for existing elasticsearch)
+* *ELASTICSEARCH_HOST* - default to localhost
+* *ELASTICSEARCH_CLUSTER_NAME* - default to assembly name (for Example Knowledge )
+* *ELASTICSEARCH_TCP_PORT* - default to 9300
+
+## Running the image
+
+To run the docker image simple call:
+
+* standard running with an external elasticsearch:
+
+    user@:> docker run \
+             -e ELASTICSEARCH_HOST=1.1.1.1 \
+             -e ELASTICSEARCH_CLUSTER_NAME='staging' \
+             -p 8888:88 yangdb/yang.db:latest
+
+
+* InterActive running with embedded elasticsearc:
+
+    user@:> docker run \
+        -e ELASTICSEARCH_EMBEDDED=true \
+        -e ELASTICSEARCH_CLUSTER_NAME='knowledge' \
+        -p 8888:88 -it yangdb/yang.db:latest
+
+* Running with embedded elasticsearc with mapping all ports to host:
+
+    user@:> docker run \
+        -e ELASTICSEARCH_EMBEDDED=true \
+        -e ELASTICSEARCH_CLUSTER_NAME='knowledge' \
+        --network=host -it yangdb/yang.db:latest
+
+## Running docker compose
+It is also possible to run yangDb as a composite collection of dockers, to do so it would require
+to run docker compose using a compose yaml such as the one suggested in the yang.db github repo.
+
+see https://github.com/YANG-DB/yang-db/blob/develop/docker-compose.yml
+
+## Archive
+
+Historical releases can be found under release tags:
+https://hub.docker.com/r/yangdb/yang.db/tags
+.

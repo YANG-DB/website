@@ -1,0 +1,44 @@
+////
+ * Copyright (C) 2016 - 2019 yangdb   ------ www.yangdb.org ------
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+////
+= Get Involved
+:jbake-type: page
+:jbake-tags: download
+:jbake-status: published
+:idprefix:
+
+
+The YangDb project is developed by volunteers and is always looking for new contributors
+to work on all parts of the project. Every contribution is welcome and needed to make it better.
+A contribution can be anything from a small documentation typo fix to a new component.
+
+Before you start to contribute we suggest to join the user and development mailing lists.
+
+A contribution is always done through https://github.com/YANG-DB/yang-db/issues[YangDb Issues].
+Please https://github.com/YANG-DB/yang-db/issues/new/choose[create an issue]
+which describes the change and attach a patch to it.
+Every received patch will be reviewed and then either be committed or we give appropriate feedback
+to change it.
+
+
+## Contributions wanted
+
+* https://github.com/YANG-DB/yang-db/projects/1#card-27851184[yangdb-27851184]: Add E/S mapping extractor
+* https://github.com/YANG-DB/yang-db/projects/1#card-28116721[yangdb-28116721]: Add E/S Rest Client API Support
+* https://github.com/YANG-DB/yang-db/projects/1#card-27797354[yangdb-27797354]: Add CSV Upload file API
+* https://github.com/YANG-DB/yang-db/projects/1#card-27766501[yangdb-27766501]: Replace fuse client's Restasured with OKHttp
+* https://github.com/YANG-DB/yang-db/projects/1#card-28116721[yangdb-28116721]: Add UI interface for the query builder
+* https://github.com/YANG-DB/yang-db/projects/1#card-28116887[yangdb-28116887]: Write more documentation for the EPB
+* https://github.com/YANG-DB/yang-db/projects/1#card-28116923[yangdb-28116923]: Write more documentation for the statistics calculator
+

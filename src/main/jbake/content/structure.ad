@@ -1,0 +1,63 @@
+////
+ * Copyright (C) 2016 - 2019 yangdb   ------ www.yangdb.org ------
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+////
+= Structure
+:jbake-type: page
+:jbake-tags: policy
+:jbake-status: published
+:idprefix:
+
+YangDb distribution is structured as a directory tree as follows:
+
+
+
+ **- knowledge
+    **  config
+            - application.conf
+            - logback.xml
+    ** indexTemplates
+            - fuse-engine-logs.json
+            - e.json
+            - rel.json
+            - ref.json
+            - i.json
+    ** lib
+        - ...
+        - 3rd party jars
+        - ...
+    ** ontology
+        - Knowledge.json
+        - KnowledgeTransformation.json
+  - start-fuse-service.sh
+
+The Root folder is the assembly location, as described before -the assembly is a specific ontology distribution
+for build for specific needs with a distinct behavior.
+
+== config
+This folder contains the application.conf configuration file with configuration parameters to the engine.
+It also contains the logback.xml file which describes the log appenders and log level.
+
+== indexTemplates
+This folder contains the elasticsearch indices templates with regards to each index type, it contains all the
+fields, tokenizers and analyzers that are available to use in that specific assembly.
+
+The templates are used with the *_load/init_* api to initialize an empty elasticsearch database.
+
+== lib
+Contains all the 3rd party libraries and yang-db artifacts needed to run ther engine - AKA the runtime dependencies.
+
+
+=== ontology
+All the schematic information needed to create and query the database with, includes the modeling of the entities, the
+properties of the entities, the relations between the entities and the properties of these relations.

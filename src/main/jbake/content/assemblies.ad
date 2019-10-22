@@ -1,0 +1,57 @@
+////
+ * Copyright (C) 2016 - 2019 yangdb   ------ www.yangdb.org ------
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+////
+= Assemblies
+:jbake-type: page
+:jbake-tags: assemblies
+:jbake-status: published
+:idprefix:
+
+== Different flavors
+
+YangDb comes with 2 different flavors for general usage:
+
+=== Knowledge Graph Schema
+RDF based agile schema with a dynamic for schema changes during usage.
+This schema stores the logical graph elements (entity / relation ) structure to several physical documents.
+Each document will represent :
+
+ - *Value*: a primitive concrete Number, String, Bool...
+
+ - *Entity*: a document representing the collection (aggregation) of values - such as Person, Car, Movie
+
+ - *Relation*: representing the relation between two distinct entities - such as hasValue, Know, Buys, Seen ...
+
+NOTE: Only _value_ document hold actual values, the other document contain the ID and metadata fields.
+
+
+image::img/knowledge-rdf.png[RDF patterns]
+
+'''
+
+This specific ontology structure allows for dynamic logical elements structure since the actual composition of the logical entity
+is basically a graph traversal (query) which is resolved in runtime.
+
+
+
+
+=== Custom Graph Schema
+Custom schema with a static indices mapping - where each logical graph element has a corresponding index (or nested index) .
+
+Each document will contain the entire ontology element it represent (including metadata fields) therefor the traversing query will be more concise (compared to the RDF model) but with low toleration for schema changes.
+We will have a varaity of indices representing the types of logical entities and relationships
+
+This representation is also known as the 'Property Graph' model...
+
+image::img/property-graph-dragons.png[property-graph]
