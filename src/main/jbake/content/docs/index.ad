@@ -38,8 +38,8 @@ image::https://img.shields.io/twitter/follow/db_yang.svg?style=social[link:"http
 * Download link:https://github.com/YANG-DB/yang-db[YANG-DB] get latest docker release  docker pull yangdb/yang.db
 
 === Manual
-* link:/docs/{yangdb_version}/manual/yangdb-manual.html[YangDb start Manual]
-* link:/docs/{yangdb_version}/manual/yangdb-client-manual.html[YangDb client Manual]
+* link:/docs/yangdb-manual.html[YangDb start Manual]
+* link:/docs/yangdb-client-manual.html[YangDb client Manual]
 * link:/docs/{yangdb_version}/apidocs/yangdb-client/index.html[YangDb client Javadoc]
 
 Note: All the documentation is also included in the binary distribution.
