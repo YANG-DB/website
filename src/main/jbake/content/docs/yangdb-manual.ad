@@ -12,10 +12,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 ////
-= Operation Manual
+= Manual
 :jbake-type: page
 :jbake-tags: manual
 :jbake-status: published
 :idprefix:
 
-This list contains common tutorial and usage use cases for YangDb.
+== Knowledge Assembly Flavor
+
+== API Swagger
+The public API is exposed using the Swagger UI tool
+
+- Swagger API Tutorial link:yangdb-api.html[Swagger]
+
+== Tutorial 1
+The first tutorial will show us how to:
+
+- start Yangdb
+ - init the schema
+ - load the ontology
+ - load the graph
+ - query the DB (logical model)
+
+First Tutorial link:yangdb-tutorial-1.html[First Tutorial]
+
+== Tutorial 2
+The second tutorial will show us how to:
+
+ - load the graph with geo location
+ - query the DB with physical model
+ - query the DB with geo pattern
+ - query the DB with composit patterns
+
+Second Tutorial link:yangdb-tutorial-advanced.html[Second Tutorial]
+

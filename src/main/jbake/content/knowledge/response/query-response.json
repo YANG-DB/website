@@ -1,0 +1,123 @@
+{
+  "requestId": "FR372570181697863680",
+  "elapsed": "00011944",
+  "renderElapsed": "00000059",
+  "totalElapsed": "00012003",
+  "data": {
+    "resourceUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110",
+    "resourceId": "d73ac9ae-665d-4c8a-89ba-5dcb5b630110",
+    "cursorStoreUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/cursor/1/page",
+    "explainPlanUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/plan",
+    "v1QueryUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/v1",
+    "asgUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/asg",
+    "elasticQueryUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/elastic",
+    "type": "concrete",
+    "error": null,
+    "innerUrlResourceInfos": [],
+    "cursorResourceInfos": [
+      {
+        "resourceUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/cursor/1",
+        "resourceId": "1",
+        "error": null,
+        "cursorRequest": {
+          "maxExecutionTime": 600000,
+          "cursorType": "LogicalGraphCursorRequest",
+          "createPageRequest": {
+            "pageSize": 1000,
+            "fetch": false
+          },
+          "include": "all",
+          "format": "JSON",
+          "countTags": []
+        },
+        "pageStoreUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/cursor/1/page",
+        "pageResourceInfos": [
+          {
+            "resourceUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/cursor/1/page/1",
+            "resourceId": "1",
+            "executionTime": 0,
+            "dataUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/cursor/1/page/1/data",
+            "requestedPageSize": 1000,
+            "actualPageSize": 1,
+            "data": {
+              "assignments": [
+                {
+                  "entities": [
+                    {
+                      "id": "e00000001.default",
+                      "label": "Entity",
+                      "metadata": {
+                        "authorization": [
+                          "procedure.1",
+                          "procedure.2"
+                        ],
+                        "creationUser": "test",
+                        "creationTime": "2019-10-25 18:10:28.406",
+                        "logicalId": "e00000001",
+                        "refs": [],
+                        "context": "default",
+                        "lastUpdateUser": "test",
+                        "category": "Person",
+                        "techId": "Myriel",
+                        "lastUpdateTime": "2019-10-25 18:10:28.406"
+                      },
+                      "properties": {}
+                    },
+                    {
+                      "id": "e00000002.default",
+                      "label": "Entity",
+                      "metadata": {
+                        "authorization": [
+                          "procedure.1",
+                          "procedure.2"
+                        ],
+                        "creationUser": "test",
+                        "creationTime": "2019-10-25 18:10:28.444",
+                        "logicalId": "e00000002",
+                        "refs": [],
+                        "context": "default",
+                        "lastUpdateUser": "test",
+                        "category": "Person",
+                        "techId": "Napoleon",
+                        "lastUpdateTime": "2019-10-25 18:10:28.444"
+                      },
+                      "properties": {
+                        "name": "Napoleon"
+                      }
+                    }
+                  ],
+                  "relationships": [
+                    {
+                      "id": "relatedEntitye00000002.defaulte00000001.default",
+                      "label": "relatedEntity",
+                      "source": "e00000002.default",
+                      "target": "e00000001.default",
+                      "direction": false,
+                      "metadata": {
+                        "authorization": [
+                          "procedure.1",
+                          "procedure.2"
+                        ],
+                        "creationUser": "test",
+                        "creationTime": "2019-10-25 18:10:28.701",
+                        "refs": [],
+                        "context": "default",
+                        "lastUpdateUser": "test",
+                        "category": "knows",
+                        "lastUpdateTime": "2019-10-25 18:10:28.701"
+                      },
+                      "properties": {}
+                    }
+                  ]
+                }
+              ],
+              "resultType": "assignments"
+            },
+            "elasticQueryUrl": "http://127.0.1.1:8888/fuse/query/d73ac9ae-665d-4c8a-89ba-5dcb5b630110/cursor/1/page/1/elastic",
+            "available": true
+          }
+        ]
+      }
+    ]
+  }
+}

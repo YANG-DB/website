@@ -1,0 +1,102 @@
+////
+ * Copyright (C) 2016 - 2019 yangdb   ------ www.yangdb.org ------
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+////
+= API Description
+:jbake-type: page
+:jbake-tags: API
+:jbake-status: published
+:idprefix:
+
+== Knowledge Assembly Flavor - API
+
+=== Swagger API
+Once the engine has started - please open the swagger API page file link:http://localhost:8888/swagger[swagger]
+
+image:../img/manual/swagger-API.png[swagger-API]
+
+YangDb (AKA Fuse) has many API call for different purposes:
+
+=== Manage
+image:../img/manual/manage-api.png[Management-API]
+Allows to query on the version & configuration info. The _/idgen/init_ api enables the engine to initiate the Id sequence generator used for
+generate unique ordered Id's.
+
+=== Catalog
+image:../img/manual/catalog-api.png[Catalog-API]
+Allows to query information regarding the catalog & schema - ontology & indices.
+It also enables creation of logical ontologies inside the schema model.
+
+=== Query
+image:../img/manual/query-api.png[Query-API]
+
+This is the main API used to query the Data held by the engine. The API alows creating queries both in link:https://www.opencypher.org/[Cypher] language
+And also in link:https://v1.ms/V1/[V1] visual query language.
+
+Each query language is being verified and translated into intermediate language that is used to plan the actual traversal path.
+
+Once a query is created, it needs to define a cursor resource - which is a view on the query results.
+The view can be of multiple types:
+
+ - Pathes
+ - Graph
+ - Table
+
+Each of the cursors is the responsible for the data fetching, the page resource is the data holder .
+
+=== Plan
+image:../img/manual/plan-api.png[Plan-API]
+
+The plan API enables the user to understand the execution path taken for the query.
+
+=== Cursor
+image:../img/manual/cursor-api.png[Cursor-API]
+
+The cursor API is the resource which is responsible to fetch the actual data in bulks (pages) and project the results in the requested view.
+
+- Pathes - view the data as a list of assignments.
+
+- Graph - view the data as a subgraph.
+
+- Table - view the data as a table (csv)
+
+=== Page
+image:../img/manual/page-api.png[Page-API]
+
+The page holds the results in the projected pattern, each page holds a constant number of elements
+When fetching the last page it can return a lower number or results or zero elements signaling all the elements
+matching the query patern where fetchd.
+
+=== Data
+image:../img/manual/data-api.png[Data-API]
+
+This is the actual data structure.  _getNextPage/_ API allows fetching the next page while allowing deletion of the former page is needed.
+
+
+=== Dashboard
+image:../img/manual/dashboard-api.png[Dashboard-API]
+
+This API allows viewing statistical information regarding the amount of graph elements, types and creation times
+
+=== Load
+image:../img/manual/load-api.png[Load-API]
+This API is intended for initialization of the indices according to the physical ontology;
+
+- init will initialize the tables and tables templates
+- drop will drop the tables
+- load will load a logical graph model into the DB according to the logical ontology
+
+=== Upload
+image:../img/manual/upload-api.png[Upload-API]
+
+- upload will load a file/zipfile containing logical graph model into the DB according to the logical ontology
