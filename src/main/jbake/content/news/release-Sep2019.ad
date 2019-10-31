@@ -25,7 +25,7 @@ YangDb docker and source distributions are available for download from docker pa
 
 The YangDb library is distributed by jitpack as well. See the Maven Dependency page for more details: link:/maven-dependency.html[Maven Dependency]
 
-# What's new in Sep2019 release
+= What's new in Sep2019 release
 
 - Logical Ontology module for knowledge assembly
 - Follow up query support
@@ -40,4 +40,8 @@ A detailed list of the issues related to this release can be found in the releas
 
 For a complete list of fixed bugs and improvements please see the README.html file included in the distribution.
 
---The YangDb Team
+=== Tags available
+    https://github.com/YANG-DB/yang-db/releases/tag/Sep-2019-RC1
+    https://github.com/YANG-DB/yang-db/releases/tag/Sep-2019-RC3
+
+

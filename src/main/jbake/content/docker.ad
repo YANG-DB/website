@@ -18,7 +18,7 @@
 :jbake-status: published
 :idprefix:
 
-## Using YangDb from Docker
+== Using YangDb from Docker
 
 YangDb {yangdb_version} is now available as a docker image.
 
@@ -29,11 +29,11 @@ Or use one of the existing release tags:
 https://hub.docker.com/r/yangdb/yang.db/tags
 
 
-### YangDb Runtime Dependency
+=== YangDb Runtime Dependency
 The YangDb engine is runtime depended in elasticsearch, it can run with an embedded elasticsearch which is bundled inside,
 Or it can use an existing elasticsearch engine.
 
-#### YangDb Image parameters
+==== YangDb Image parameters
 The next parameters define the elasticsearch location to yangDb and are given to docker as environment variables:
 
 * *ELASTICSEARCH_EMBEDDED* - default to true ( use false for existing elasticsearch)
@@ -41,7 +41,7 @@ The next parameters define the elasticsearch location to yangDb and are given to
 * *ELASTICSEARCH_CLUSTER_NAME* - default to assembly name (for Example Knowledge )
 * *ELASTICSEARCH_TCP_PORT* - default to 9300
 
-## Running the image
+== Running the image
 
 To run the docker image simple call:
 
@@ -67,14 +67,21 @@ To run the docker image simple call:
         -e ELASTICSEARCH_CLUSTER_NAME='knowledge' \
         --network=host -it yangdb/yang.db:latest
 
-## Running docker compose
+== Running docker compose
 It is also possible to run yangDb as a composite collection of dockers, to do so it would require
 to run docker compose using a compose yaml such as the one suggested in the yang.db github repo.
 
 see https://github.com/YANG-DB/yang-db/blob/develop/docker-compose.yml
 
-## Archive
+== Archive
 
 Historical releases can be found under release tags:
 https://hub.docker.com/r/yangdb/yang.db/tags
 .
+
+== Running YangDb directly (Jvm Process)
+It is possible to run YangDb directly as a java process using the tar distribution from the Git repository
+
+see https://github.com/YANG-DB/yang-db/releases/download/28-Oct-RC4/dragon-dragon.tar
+
+

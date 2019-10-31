@@ -45,7 +45,6 @@ is basically a graph traversal (query) which is resolved in runtime.
 
 
 
-
 === Custom Graph Schema
 Custom schema with a static indices mapping - where each logical graph element has a corresponding index (or nested index) .
 

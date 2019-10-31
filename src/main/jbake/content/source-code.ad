@@ -22,13 +22,13 @@
 View the code, fork and send pull requests on Github:
 
 * https://github.com/YANG-DB/yang-db[Github yangdb]
-* https://github.com/YANG-DB/site[Github yangdb-site]
+* https://github.com/YANG-DB/website[Github yangdb-website]
 * https://github.com/YANG-DB/imdb[Github IMDB sandbox]
 
 ## Apache Git Repository
 The Git repositories can be checked out with these commands:
 
 * `git clone https://github.com/YANG-DB/yang-db`
-* `git clone https://github.com/YANG-DB/site`
+* `git clone https://github.com/YANG-DB/website`
 * `git clone https://github.com/YANG-DB/imdb`
 

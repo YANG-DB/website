@@ -77,3 +77,8 @@ if so please report a broken build on the yangdb-dev mailing
 list.
 
 The build should always work for everyone.
+
+=== Running YangDb directly (Jvm Process)
+It is possible to run YangDb directly as a java process using the tar distribution from the Git repository
+
+see https://github.com/YANG-DB/yang-db/releases/download/28-Oct-RC4/dragon-dragon.tar
